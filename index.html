@@ -5,6 +5,7 @@
 :root {
   --boxColor: #0ff7;
   --rotateSpeed: 30s;
+  --bounceSpeed: 3s;
 }
 
 body {
@@ -46,11 +47,18 @@ body {
   );
 
   /*this only works in chrome however :( */
-  animation: sceneRotateReverse var(--rotateSpeed) infinite linear;
+  animation: 
+    ballBounce var(--bounceSpeed) infinite ease-out,
+    sceneRotateReverse var(--rotateSpeed) infinite linear;
 }
 
 @keyframes sceneRotateReverse {
   to { transform: rotateY(-360deg);}
+}
+
+@keyframes ballBounce {
+  0%, 100% {bottom: 1em;}
+  50% {bottom: 3em;}
 }
 
 .cube {
