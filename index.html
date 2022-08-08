@@ -70,13 +70,7 @@ body {
   height: 2em;
   background: var(--boxColor);
   transform: translateY(-50%) rotateX(90deg);
-
 }
-
-
-
-
-
 
 
 .floor {
@@ -87,12 +81,14 @@ body {
     rotateX(90deg);
   width: 15em;
   height: 15em;
-  background-image: repeating-conic-gradient(
-    from 45deg, 
-    #111 0deg 90deg, 
-    #222 90deg 180deg
-  );
-  background-size: 1em 1em;
+  background-image:
+    radial-gradient(#0000, #000 80%),
+    repeating-conic-gradient(
+      from 45deg, 
+      #111 0deg 90deg, 
+      #222 90deg 180deg
+    );
+  background-size: 100%, 1em 1em;
   
 }
 
