@@ -5,7 +5,7 @@
 :root {
   --boxColor: #0ff7;
   --rotateSpeed: 30s;
-  --bounceSpeed: 3s;
+  --bounceSpeed: 1s;
 }
 
 body {
@@ -58,7 +58,7 @@ body {
 
 @keyframes ballBounce {
   0%, 100% {bottom: 1em;}
-  50% {bottom: 3em;}
+  50% {bottom: 3em; animation-timing-function: ease-in;}
 }
 
 .cube {
