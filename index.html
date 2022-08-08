@@ -30,6 +30,8 @@ body {
   to { transform: rotateY(360deg);}
 }
 
+
+
 .ball {
   width: 1em; /* $size */;
   height: 1em; /* or use 1em and font-size as variable */
@@ -44,7 +46,11 @@ body {
   );
 
   /*this only works in chrome however :( */
-  animation: sceneRotate var(--rotateSpeed) infinite linear reverse;
+  animation: sceneRotateReverse var(--rotateSpeed) infinite linear;
+}
+
+@keyframes sceneRotateReverse {
+  to { transform: rotateY(-360deg);}
 }
 
 .cube {
