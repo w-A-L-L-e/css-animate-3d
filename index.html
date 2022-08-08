@@ -33,13 +33,51 @@ body {
 }
 
 .cube {
+  transform-style: preserve-3d;
   width: 2em;
   height: 2em;
-  background-color: var(--boxColor);
   position: absolute;
   top: -1em;
   left: -1em;
 }
+
+.cube .left, .right, .back, .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--boxColor);
+}
+
+.cube .front {
+  transform: translateZ(1em);
+}
+
+.cube .right {
+  transform: rotateY(90deg) translateZ(1em);
+}
+
+.cube .back {
+  transform: rotateY(180deg) translateZ(1em);
+}
+
+.cube .left {
+  transform: rotateY(270deg) translateZ(1em);
+}
+
+.cube .top {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: var(--boxColor);
+  transform: translateY(-50%) rotateX(90deg);
+
+}
+
+
+
+
+
+
 
 .floor {
   position: absolute;
@@ -64,7 +102,16 @@ body {
 <body>
   <div class="scene">
     <div class="floor"></div>
-    <div class="cube"></div>
+
+    <div class="cube">
+      <div class="back"></div>
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="top"></div>
+      <div class="bottom"></div>
+      <div class="front"></div>
+    </div>
+      
     <div class="ball"></div>
   </div>
 
